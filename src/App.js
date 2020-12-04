@@ -1,4 +1,5 @@
 
+import React from 'react'
 import './App.css';
 import Grid from "@material-ui/core/Grid";
 
@@ -8,22 +9,31 @@ const Header = (
 
 
 function App() {
+  const locations = ["at home", "in a classroom", "in a garage", "at your lab", "in space", "in your luggage", "at your desk", "with your friends", "at your friends"]
+  const [ID, setID] = React.useState(1)
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setID(id => (id + 1) % locations.length)
+    }, 1200);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <Grid container spacing={4}>
-      <Grid item xs={2}/>
-      <Grid item xs={8}>
+    <Grid container spacing={2}>
+      <Grid item xs={false} md={2}/>
+      <Grid item xs={12} md={8}>
         {Header}
       </Grid>
-      <Grid item xs={2}/>
+      <Grid item xs={false} md={2}/>
 
-      <Grid item xs={2}/>
-      <Grid item xs={4}>
-        <div id="content" style={{"marginTop": "150px"}}>
-          <h1 className="title"> Build biology at home,
-          without the price tag.
-          </h1>
+      <Grid item xs={false} md={2}/>
+      <Grid item xs={12} md={4}>
+        <div id="content" style={{"marginTop": "100px"}}>
+          <h1 className="title"> Build biology {locations[ID]},</h1>
+          <h1 className="title"> without the price tag.</h1>
           <div id="mc_embed_signup">
-          <form style={{padding: 0, marginTop: "20px"}} action="https://github.us18.list-manage.com/subscribe/post?u=2314215b756d01a83ce867c28&amp;id=f126210965" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+          <form style={{padding: "15px", marginTop: "20px"}} action="https://github.us18.list-manage.com/subscribe/post?u=2314215b756d01a83ce867c28&amp;id=f126210965" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
               <div id="mc_embed_signup_scroll">
 
               <input type="email" name="EMAIL" className="email" id="mce-EMAIL" placeholder="email address" required/>
@@ -36,10 +46,10 @@ function App() {
 
       </Grid>
 
-      <Grid item xs={4}>
+      <Grid item xs={12} md={4}>
         <img src="hero.png" width="500px"/>
       </Grid>
-      <Grid item xs={2}/>
+      <Grid item xs={false} md={2}/>
 
     </Grid>
   );
