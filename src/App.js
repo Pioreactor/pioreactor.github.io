@@ -1,24 +1,47 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Grid from "@material-ui/core/Grid";
+
+const Header = (
+  <img className="logo" src="logo.png" />
+);
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid container spacing={4}>
+      <Grid item xs={2}/>
+      <Grid item xs={8}>
+        {Header}
+      </Grid>
+      <Grid item xs={2}/>
+
+      <Grid item xs={2}/>
+      <Grid item xs={4}>
+        <div id="content" style={{"marginTop": "150px"}}>
+          <h1 className="title"> Build biology at home,
+          without the price tag.
+          </h1>
+          <div id="mc_embed_signup">
+          <form style={{padding: 0, marginTop: "20px"}} action="https://github.us18.list-manage.com/subscribe/post?u=2314215b756d01a83ce867c28&amp;id=f126210965" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+              <div id="mc_embed_signup_scroll">
+
+              <input type="email" name="EMAIL" className="email" id="mce-EMAIL" placeholder="email address" required/>
+              <div style={{position: "absolute", left: "-5000px"}} aria-hidden="true"><input type="text" name="b_2314215b756d01a83ce867c28_f126210965" tabIndex="-1"/></div>
+              <div className="clear"><input style={{backgroundColor: "#ff6684"}} type="submit" value="Get notified" name="subscribe" id="mc-embedded-subscribe" className="button"/></div>
+              </div>
+          </form>
+          </div>
+        </div>
+
+      </Grid>
+
+      <Grid item xs={4}>
+        <img src="hero.png" width="500px"/>
+      </Grid>
+      <Grid item xs={2}/>
+
+    </Grid>
   );
 }
 
