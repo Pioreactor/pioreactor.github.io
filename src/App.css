@@ -7,9 +7,10 @@
 .title{
   font-family: 'Crete Round';
   font-weight: 400;
-  font-size: 2.3em;
+  font-size: 2.1em;
   margin: 10px 0px;
   z-index: 100;
   padding: 0px 15px;
+  position: relative;
 }
 
