@@ -12,13 +12,6 @@ function App() {
   const locations = ["at home", "in a classroom", "in a garage", "at your lab", "in outer space", "in your luggage", "at your desk", "with your friends", "at your friends"]
   const [ID, setID] = React.useState(0)
 
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setID(id => (id + 1) % locations.length);
-    }, 2500);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <Grid container spacing={2}>
       <Grid item xs={false} md={2}/>
@@ -29,7 +22,7 @@ function App() {
 
       <Grid item xs={false} md={2}/>
       <Grid item xs={12} md={4}>
-        <div id="content" style={{marginTop: "100px", position: "absolute"}}>
+        <div id="content" style={{marginTop: "100px"}}>
           <h1 className="title"> Build biology {locations[ID]},</h1>
           <h1 className="title"> without the price tag.</h1>
           <div id="mc_embed_signup">
@@ -47,7 +40,7 @@ function App() {
       </Grid>
 
       <Grid item xs={12} md={4}>
-        <img style={{position:"relative"}} src="hero.png" width="500px"/>
+        <img src="hero.png" width="500px"/>
       </Grid>
       <Grid item xs={false} md={2}/>
 
