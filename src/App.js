@@ -23,8 +23,14 @@ function App() {
       <Grid item xs={false} md={2}/>
       <Grid item xs={12} md={4}>
         <div id="content" style={{marginTop: "100px"}}>
-          <h1 className="title"> Build biology {locations[ID]},</h1>
-          <h1 className="title"> without the price tag.</h1>
+          <h1 className="title"> Build biology, without the price tag.</h1>
+          <p className="desc"> The Pioreactor is a bioreactor, reimagined for today's curious hacker. </p>
+
+          <p className="desc">Built to be low-cost, extensible, and
+          using modern hardware and software technologies.</p>
+
+          <p className="desc"> Scale from one to dozens, in your garage or in your lab,
+          teaching biology to children up to graduate students.</p>
           <div id="mc_embed_signup">
           <form style={{padding: "15px", marginTop: "20px", width: "400px"}} action="https://github.us18.list-manage.com/subscribe/post?u=2314215b756d01a83ce867c28&amp;id=f126210965" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
               <div id="mc_embed_signup_scroll">

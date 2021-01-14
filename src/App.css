@@ -1,5 +1,5 @@
 .logo {
-  margin: 40px 0px 50px 0px;
+  margin: 30px 0px 10px 0px;
   width: 170px;
   padding: 0px 15px;
 }
@@ -8,7 +8,12 @@
   font-family: 'Crete Round';
   font-weight: 400;
   font-size: 2.1em;
-  margin: 10px 0px;
+  margin: 0px 0px 30px 0px;
   padding: 0px 15px;
 }
 
+
+.desc {
+  margin: 20px 0px;
+  padding: 0px 15px;
+}
